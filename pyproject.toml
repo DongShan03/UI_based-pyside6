@@ -1,0 +1,10 @@
+[project]
+name = "ui-based-pyside6"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pyside6>=6.6.3.1",
+    "requests>=2.32.3",
+]
