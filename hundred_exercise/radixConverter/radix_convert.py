@@ -4,6 +4,7 @@ from Ui_radixConverter import Ui_RadixConverter
 
 class MyMainWindow(QWidget, Ui_RadixConverter):
     def __init__(self):
+
         super().__init__()
         self.setupUi(self)
 
