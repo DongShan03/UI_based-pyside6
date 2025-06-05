@@ -5,6 +5,7 @@ from PIL import Image, ImageQt, ImageFilter
 class MyWindow(QWidget):
     def __init__(self):
         super().__init__()
+
         self.btn = QPushButton("选择图像")
         self.btn.clicked.connect(self.btnClick)
 

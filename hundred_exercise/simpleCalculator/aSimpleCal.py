@@ -1,10 +1,15 @@
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QMainWindow, QApplication, QLabel, QLineEdit, QVBoxLayout, QWidget, QPushButton, QMainWindow
 from cal import Ui_Form
+import qtmodern.styles
+import qtmodern.windows
+import qdarktheme
+
 class MyWindow(QWidget, Ui_Form):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.setWindowTitle("简易计算器")
         self.textOutput.setReadOnly(True)
         self.textOutput.ensureCursorVisible()
         self.button1.clicked.connect(lambda: self.textOutput.insertPlainText("1"))
@@ -39,5 +44,6 @@ class MyWindow(QWidget, Ui_Form):
 if __name__ == "__main__":
     app = QApplication([])
     window = MyWindow()
+    qdarktheme.setup_theme()
     window.show()
     app.exec()
