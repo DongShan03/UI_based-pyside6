@@ -12,6 +12,7 @@ class MainWindow(QWidget):
         self.listWidget.takeItem(2)
 
         self.listWidget.item(2).setText("test2")
+        self.listWidget.item(2).setCheckState(Qt.CheckState.Unchecked)
 
         self.listWidget.findItems("da", Qt.MatchFlag.MatchExactly)
         self.listWidget.findItems("da", Qt.MatchFlag.MatchContains)
